@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 {
     "users": [
         {
@@ -11,39 +9,25 @@
         },
         {
             "id": 1781597911192,
-            "nom": "modou",
+            "nom": "khadija",
             "email": "khadijajoop2@gmail.com",
             "password": "1234",
             "role": "client"
         },
-        {
-            "id": 1781599267833,
-            "nom": "modou",
-            "email": "azerty@gmail.com",
-            "password": "1234",
-            "role": "client"
-        },
-        {
-            "id": 1781599541728,
-            "nom": "modou",
-            "email": "qwerty@gmail.com",
-            "password": "12345",
-            "role": "client"
-        },
-        {
-            "id": 1781600777393,
-            "nom": "modou",
-            "email": "qsdfghj@gmail.com",
-            "password": "12345",
-            "role": "client"
-        },
+        
         {
             "id": 1781601115429,
             "nom": "modou",
             "email": "azerty1@gmail.com",
             "password": "1234",
             "role": "client"
+        },
+        {
+            "id": 1781610872029,
+            "nom": "modou",
+            "email": "khadijajoop23@gmail.com",
+            "password": "12345",
+            "role": "client"
         }
     ]
 }
->>>>>>> Stashed changes

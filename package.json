@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "json-server": "^0.17.4"
+    "express": "^5.2.1"
   }
 }

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="events.css">
-    <link rel="stylesheet" href="icone.css">
+    <link rel="stylesheet" href="./Styles/events.css">
+    <link rel="stylesheet" href="./Styles/icone.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://googleapis.com" rel="stylesheet">
@@ -16,45 +16,11 @@
 </head>
 
 <body>
-        <div class="rien page-container dpl">
-            <div class="inscrip">
-                <img src="Frame 1.png" class="img1">
-                <h2 class="talc text-2xl font-bold text-[#1E1E1E]">Inscription</h2>
-                <p style="align-self: center;">Créez votre compte gratuitement</p>
-                                    <br>
-                <label>Nom complet</label>
-                <input type="text" id="nom" class="tail-inpt" placeholder="Entrer votre  Prenom & Nom">
-                <br>
-                <label>Email</label>
-                <input type="email" id="email" class="tail-inpt" placeholder="Ex: odcsenagal@gamail.com">
-                <br>
-                <label>Mot de passe </label>
-                <input  type="password" id="password" class="tail-inpt" placeholder="Enrer votre mot de passe"><br>
-
-                <label> Confirmer le mot de passe </label>
-                <input type="password" id="confirmPassword" class="tail-inpt" placeholder="Confirmer votre mot de passe">
-                <br>
-                <button class="btnCmpt" id="btncmpt">Créer mon compte</button>
-                 <br>
-                <div class="avanta">
-                    <span class="lucide--circle-check-big"></span><span style="color: #F6960D; font-weight: 200;">Avantages gratuits:</span>
-                    <ul class="list-disc ml-8">
-                        <li>Réservations illimitées</li>
-                        <li>Codes QR pour vos salles d’ événements</li>
-                        <li>Historique complet</li>
-                    </ul>
-                </div>
-                 <br>
-                <div style="align-self: center; "><span>Vous avez déjà un compte?</span><span style="color: rgb(95, 57, 4); font-weight: bold;" id="cnect">Se connecte</span></div>
-                <br> <br>
-                <div style="align-self: center;"><span class="formkit--arrowleft"></span><span>Retour à l'accueil</span></div>
-
-            </div>
-        </div>
-
-
-
-    <script src="events.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/app.js"></script>
 </body>
 
 </html>
+
+  
+
