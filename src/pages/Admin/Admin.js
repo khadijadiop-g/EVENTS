@@ -96,7 +96,6 @@ const Admin = () => {
 Admin.afterRender = () => { 
     const deconnexion = document.getElementById('deconnexion');
     deconnexion?.addEventListener('click', () => {
-        // localStorage.removeItem('currentUser');
         navigate('/');
     });
 }
