@@ -1,11 +1,46 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "nom": "Administrateur",
-      "email": "admin@gmail.com",
-      "password": "admin123",
-      "role": "admin"
-    }
-  ]
+    "users": [
+        {
+            "id": 1,
+            "nom": "Administrateur",
+            "email": "admin@gmail.com",
+            "password": "admin123",
+            "role": "admin"
+        },
+        {
+            "id": 1781597911192,
+            "nom": "modou",
+            "email": "khadijajoop2@gmail.com",
+            "password": "1234",
+            "role": "client"
+        },
+        {
+            "id": 1781599267833,
+            "nom": "modou",
+            "email": "azerty@gmail.com",
+            "password": "1234",
+            "role": "client"
+        },
+        {
+            "id": 1781599541728,
+            "nom": "modou",
+            "email": "qwerty@gmail.com",
+            "password": "12345",
+            "role": "client"
+        },
+        {
+            "id": 1781600777393,
+            "nom": "modou",
+            "email": "qsdfghj@gmail.com",
+            "password": "12345",
+            "role": "client"
+        },
+        {
+            "id": 1781601115429,
+            "nom": "modou",
+            "email": "azerty1@gmail.com",
+            "password": "1234",
+            "role": "client"
+        }
+    ]
 }

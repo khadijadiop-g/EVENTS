@@ -158,3 +158,16 @@ box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
     position: relative;
     flex: 1;
 }
+
+.page-container2{
+     background-image: url('../Assets/Images/bgr.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    overflow: auto;
+  
+}

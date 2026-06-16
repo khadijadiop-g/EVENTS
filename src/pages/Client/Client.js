@@ -1,11 +1,6 @@
 import { navigate } from '../../../router.js';
 
-const Client = () => {
-    // const utilisateur = { nom: 'kkkkk' };
-    // const container = document.querySelector('#app');
-    // container.className = 'rien';
-    // container.innerHTML = 
-    
+const Client = () => { 
     return `
 
 
@@ -30,7 +25,7 @@ const Client = () => {
             <div class="container2 dpl">
                 <div class="bord">
                     <div style="flex: 1; line-height: 1.4; padding-top: 3%;">
-                        <h2 class="text-2xl font-bold text-[#1E1E1E]">Bienvenue, </h2>
+                        <h2 class="text-2xl font-bold text-[#1E1E1E]">Bienvenue,</h2>
                         <p style="color: #1E1E1E; opacity: 71%;">Gerez vos reservations d'evenements</p>
                     </div>
 

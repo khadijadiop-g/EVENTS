@@ -1,7 +1,11 @@
 const Accueil = () => `
-    <div>
-        <h2>Bienvenue sur l'application SPA</h2>
+
+    <div
+    <div class="page-container2 dpl">
+        <h2>Bienvenue sur Mon site d evenement</h2>
+        <br>
         <p>Ceci est la page d'Accueil.</p>
+         <br>
         <button id="goToLogin">Aller à la page Connexion</button>
     </div>
 `;

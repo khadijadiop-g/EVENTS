@@ -1,6 +1,5 @@
 import { navigate } from "../../../router.js";
-
-
+import { data } from '../../../services.js';
 const Connexion = () => {
 
     return `
@@ -18,13 +17,6 @@ const Connexion = () => {
             <label>Mot de passe</label>
             <input type="password" id="passwordConnexion" class="tail-inpt" placeholder="Entrer votre mot de passe">
             <br>
-
-            <select class="tail-inpt" id="roleConnexion">
-                <option value="client">Client</option>
-                <option value="admin">Admin</option>
-            </select>
-            <br>
-
 
             <button class="btnCmpt" id="btnConnexion">Se connecter</button>
             <br>
@@ -49,15 +41,18 @@ Connexion.afterRender = () => {
     const btnConnexion = document.getElementById('btnConnexion');
     const retour = document.getElementById('retour');
     const retourInscription = document.getElementById('retourInscription');
-    const roleConnexion = document.getElementById('roleConnexion');
 
     btnConnexion?.addEventListener('click', () => {
-        alert('1')
-        navigate('/client')
-    //    const utilisateur = connecter(roleConnexion?.value || 'client');
-    //    if (utilisateur) {
-    //        utilisateur.role === 'admin' ? navigate('/admin') : navigate('/client');
-    //    }
+        const user = connecter();
+      if (!user) {
+        alert('Email ou mot de passe incorrect');
+        return;
+      }
+    if (user.role === 'admin') {
+        navigate('/admin');
+    } else {
+        navigate('/client');
+    }
     });
     retourInscription?.addEventListener('click', () => navigate('/inscription'));
 
@@ -73,14 +68,21 @@ function connecter() {
         return null;
     }
 
-    // Création d'un utilisateur temporaire pour la redirection (pas de stockage)
-    // const utilisateur = {
-    //     nom: email.split('@')[0] || 'Utilisateur',
-    //     email,
-    //     role
-    // };
+    if (!data || !Array.isArray(data.users)) {
+        alert('Les données ne sont pas encore chargées, réessayez.');
+        return null;
+    }
 
-    alert('Connexion en cours...');
+    const user = data.users.find(u => u.email === email && u.password === password);
+
+    if (!user) {
+        alert('Email ou mot de passe incorrect');
+        return null;
+    }
+
+    alert('Connexion réussie');
+    return user;
 }
+
 
 export default Connexion;

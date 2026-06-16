@@ -1,4 +1,5 @@
 import { navigate } from "../../../router.js";
+import { data, updateDb } from '../../../services.js';
 
 const Inscription = () => {
 
@@ -52,37 +53,57 @@ function inscrire() {
 
     if (nom === '' || email === '' || password === '' || confirmPassword === '') {
         alert('Veuillez remplir tous les champs');
-        return;
+        return null;
     }
 
     if (password !== confirmPassword) {
         alert('Les mots de passe ne correspondent pas');
-        return;
+        return null;
     }
 
-    // const utilisateurs = recupererUtilisateurs();
-    // const emailExiste = utilisateurs.find(utilisateur => utilisateur.email === email);
+    if (!data || !Array.isArray(data.users)) {
+        alert('Les données ne sont pas encore chargées, réessayez.');
+        return null;
+    }
 
-    // if (emailExiste) {
-    //     alert('Cet email existe deja');
-    //     return;
-    // }
-    alert('Compte cree avec succes. Connectez-vous maintenant.');
+    if (data.users.some(user => user.email === email)) {
+        alert('Cet email est déjà utilisé');
+        return null;
+    }
+
+    const newUser = {
+        id: Date.now(),
+        nom,
+        email,
+        password,
+        role: 'client'
+    };
+    updateDb(newUser, "users");
+    alert('Compte cree avec succes');
+    return newUser;
 }
 
 Inscription.afterRender = () => {
-
-  const btncmpt = document.getElementById('btncmpt');
+    const btncmpt = document.getElementById('btncmpt');
      const retour= document.getElementById('retour');
      const cnect = document.getElementById('cnect');
  
      btncmpt?.addEventListener('click', () => {
-        inscrire()
+        const user = inscrire();
+        if (user) {
+            if (user.role === 'admin') {
+                navigate('/admin');
+            } else {
+                navigate('/client');
+            }
+        }
      });
  
      retour?.addEventListener('click', () => navigate('/'));
         cnect?.addEventListener('click', () => navigate('/connexion'));
 
 };
+
+
 
 export default Inscription;

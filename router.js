@@ -1,3 +1,5 @@
+import { loadData } from './services.js';
+
 const routes = {
     '/': 'Accueil',
     '/connexion': 'Connexion',
@@ -43,7 +45,8 @@ const handleHashChange = async () => {
     await render(path);
 };
 
-const initRouter = () => {
+const initRouter = async () => {
+    await loadData();
     window.addEventListener('hashchange', handleHashChange);
     handleHashChange();
 };
