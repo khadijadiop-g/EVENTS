@@ -44,10 +44,7 @@ Connexion.afterRender = () => {
 
     btnConnexion?.addEventListener('click', () => {
         const user = connecter();
-      if (!user) {
-        alert('Email ou mot de passe incorrect');
-        return;
-      }
+      
     if (user.role === 'admin') {
         navigate('/admin');
     } else {
@@ -83,6 +80,5 @@ function connecter() {
     alert('Connexion réussie');
     return user;
 }
-
 
 export default Connexion;

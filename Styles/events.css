@@ -171,3 +171,120 @@ box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
     overflow: auto;
   
 }
+.nav1{
+    background-color: black;
+    opacity: 44%;
+    height: 7vh;
+    width: 100%;
+    padding: 2%;
+    gap: 2%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-weight: bold;
+}
+.btn1{
+    height: 40px;
+    width: 200px;
+    font-size: 1.3em;
+    border-radius: 8px;
+    border: 2px solid var(--cl4);
+    cursor: pointer;
+}
+.btn1:first-child{
+   color: var(--cl5);
+}
+
+.accueil{
+    padding-top: 2%;
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+}
+
+.exp{
+    display: flex;
+    height: 15%;
+    width: 40%;
+    gap: 2%;
+    padding: 1%;
+}
+
+.rond{
+    flex: 1;
+    position: relative;
+}
+.icone{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: var(--cl7);
+    position: absolute;
+    top: 10%;
+    left: 3%;
+}
+.txt1{
+    position: absolute;
+    top: 20%;
+    left: 34%;
+    font-size: 1.2em;
+    color: #1e1e1efb;
+    font-weight: 500;
+}
+.txt2{
+    position: absolute;
+    bottom: 7%;
+    left: 36%;
+    font-size: 0.8em;
+    font-weight: 200;
+    color: #1e1e1ee5;
+}
+.serv{
+ height: 6%;
+    width: 10%;
+    background-color: var(--cl3);
+    border-radius: 6px;
+    color: rgb(20, 18, 14);
+
+}
+
+.page-container3{
+height: 60%;
+width: 38%;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(2,1fr);
+gap: 2%;
+}
+
+.event{
+    background-color: #fadbb0;
+    position: relative;
+    border-radius: 10px;
+}
+
+.icone2 {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.txt3{
+    position: absolute;
+    top: 21%;
+    left: 42%;
+    font-size: 1.3em;
+    color: var(--cl5);
+    font-weight: 600;
+}
+.txt4{
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    font-size: 0.9em;
+    color: var(--cl5);
+    font-weight: 400;
+}
