@@ -12,22 +12,7 @@
             "nom": "khadija",
             "email": "khadijajoop2@gmail.com",
             "password": "1234",
-            "role": "client"
-        },
-        
-        {
-            "id": 1781601115429,
-            "nom": "modou",
-            "email": "azerty1@gmail.com",
-            "password": "1234",
-            "role": "client"
-        },
-        {
-            "id": 1781610872029,
-            "nom": "modou",
-            "email": "khadijajoop23@gmail.com",
-            "password": "12345",
-            "role": "client"
+            "role": "admin"
         }
     ]
 }
