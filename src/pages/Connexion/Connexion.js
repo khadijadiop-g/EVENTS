@@ -27,7 +27,7 @@ const Connexion = () => {
             </div>
             <br><br>
 
-            <div style="align-self: center;" id="retour" >
+            <div style="align-self: center; cursor: pointer;" id="retour" >
                 <span class="formkit--arrowleft"></span>
                 <span>Retour a l'accueil</span>
             </div>

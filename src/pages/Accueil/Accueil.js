@@ -35,7 +35,6 @@ const Accueil = () => {
 
             <div class="serv dpl text-2xl font-bold text-[#1E1E1E]"><h2>Nos services</h2></div>
            <br> <br> 
-           <br> <br> 
            
             <div class="page-container3" id="events">
               <div class="event">

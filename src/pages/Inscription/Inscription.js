@@ -34,9 +34,9 @@ const Inscription = () => {
                     </ul>
                 </div>
                  <br>
-                <div style="align-self: center; "><span>Vous avez déjà un compte?</span><span style="color: rgb(95, 57, 4); font-weight: bold;" id="cnect">Se connecte</span></div>
+                <div style="align-self: center; "><span>Vous avez déjà un compte?</span><span style="color: rgb(95, 57, 4); font-weight: bold; cursor: pointer;" id="cnect">Se connecte</span></div>
                 <br> <br>
-                <div style="align-self: center;" id="retour" ><span class="formkit--arrowleft"></span><span>Retour à l'accueil</span></div>
+                <div style="align-self: center; cursor: pointer;" id="retour" ><span class="formkit--arrowleft"></span><span>Retour à l'accueil</span></div>
 
             </div>
         </div>
