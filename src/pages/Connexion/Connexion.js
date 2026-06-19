@@ -1,13 +1,12 @@
 import { navigate } from "../../../router.js";
-import { data } from '../../../services.js';
-const Connexion = () => {
 
+const Connexion = () => {
     return `
     <div class="page-container dpl">
         <div class="connex inscrip">
            <img src="./Assets/Images/Frame 1.png" class="img1">
             <h2 class="talc text-2xl font-bold text-[#1E1E1E]">Connexion</h2>
-            <p style="align-self: center;">Acceder a votre compte</p>
+            <p style="align-self: center;">Accéder à votre compte</p>
             <br>
 
             <label>Email</label>
@@ -27,13 +26,12 @@ const Connexion = () => {
             </div>
             <br><br>
 
-            <div style="align-self: center; cursor: pointer;" id="retour" >
+            <div style="align-self: center; cursor: pointer;" id="retour">
                 <span class="formkit--arrowleft"></span>
-                <span>Retour a l'accueil</span>
+                <span>Retour à l'accueil</span>
             </div>
         </div>
-        </div>  
-
+    </div>
     `;
 };
 
@@ -42,43 +40,52 @@ Connexion.afterRender = () => {
     const retour = document.getElementById('retour');
     const retourInscription = document.getElementById('retourInscription');
 
-    btnConnexion?.addEventListener('click', () => {
-        const user = connecter();
-      
-    if (user.role === 'admin') {
-        navigate('/admin');
-    } else {
-        navigate('/client');
-    }
-    });
-    retourInscription?.addEventListener('click', () => navigate('/inscription'));
+    btnConnexion?.addEventListener('click', async () => {
+        const user = await connecter();
 
+        if (user) {
+            if (user.role === 'admin') {
+                navigate('/admin');
+            } else {
+                navigate('/client');
+            }
+        }
+    });
+
+    retourInscription?.addEventListener('click', () => navigate('/inscription'));
     retour?.addEventListener('click', () => navigate('/'));
 };
 
-function connecter() {
+async function connecter() {
     const email = document.getElementById('emailConnexion').value.trim().toLowerCase();
     const password = document.getElementById('passwordConnexion').value.trim();
 
-    if (email === '' || password === '') {
+    if (!email || !password) {
         alert('Veuillez remplir tous les champs');
         return null;
     }
 
-    if (!data || !Array.isArray(data.users)) {
-        alert('Les données ne sont pas encore chargées, réessayez.');
+    try {
+        const response = await fetch('http://localhost:3000/users');
+        if (!response.ok) {
+            throw new Error('Impossible de charger les utilisateurs');
+        }
+
+        const data = await response.json();
+        const user = data.find((u) => u.email === email && u.password === password);
+
+        if (!user) {
+            alert('Email ou mot de passe incorrect');
+            return null;
+        }
+
+        alert('Connexion réussie');
+        return user;
+    } catch (error) {
+        console.error('Erreur:', error);
+        alert('Erreur lors de la connexion');
         return null;
     }
-
-    const user = data.users.find(u => u.email === email && u.password === password);
-
-    if (!user) {
-        alert('Email ou mot de passe incorrect');
-        return null;
-    }
-
-    alert('Connexion réussie');
-    return user;
 }
 
 export default Connexion;
