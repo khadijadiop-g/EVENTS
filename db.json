@@ -20,6 +20,13 @@
       "email": "mouhamed123@gmail.com",
       "password": "1234",
       "role": "client"
+    },
+    {
+      "id": 1781862313833,
+      "nom": "Lena Samba",
+      "email": "lena@gmail.com",
+      "password": "12345",
+      "role": "client"
     }
   ]
 }
