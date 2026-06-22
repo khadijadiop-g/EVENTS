@@ -87,10 +87,11 @@ Accueil.afterRender = () => {
     })
 
     events?.addEventListener('click', (event) => {
-    if (event.target.class === 'event') {
-        navigate('/inscription')
-    }
-    })
+        const clickedCard = event.target.closest?.('.event');
+        if (clickedCard) {
+            navigate('/inscription');
+        }
+    });
 
    
 };
